@@ -57,14 +57,10 @@ class GameViewController: UIViewController {
 
             if checkForWin() {
                 println("WIN!!!")
-            } else {
-                println("NOT A WIN BOO")
             }
 
             // Switch player for next turn
             switchPlayer()
-
-            println("Box \(senderBoxIndex) is now set to \(currentPlayer.rawValue)")
 
         } else {
 
