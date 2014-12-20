@@ -29,7 +29,7 @@ class GameViewController: UIViewController {
 
     @IBOutlet var boxes: [TicTacBox]!
 
-    var combinations = [[0, 1, 2], [0, 3, 6], [1, 4, 7], [2, 5, 9], [3, 4, 5], [6, 7, 9], [0, 4, 8], [6, 4, 2]]
+    var winningCombinations = [[0, 1, 2], [0, 3, 6], [1, 4, 7], [2, 5, 9], [3, 4, 5], [6, 7, 9], [0, 4, 8], [6, 4, 2]]
 
     var currentPlayer: TicTacCharacter!
 
@@ -88,7 +88,7 @@ class GameViewController: UIViewController {
             return find(self.boxes, box)!
         }
 
-        for combination in combinations {
+        for combination in winningCombinations {
             let mutualKeys = combination.filter({ return contains(currentPlayerBoxIndices, $0) })
 
             if mutualKeys.count == combination.count {
