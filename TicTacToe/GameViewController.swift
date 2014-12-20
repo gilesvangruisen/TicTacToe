@@ -9,45 +9,34 @@
 import Foundation
 import UIKit
 
-enum TicTacCharacters: String {
+enum TicTacCharacter: String {
     case X = "X"
     case O = "O"
     case Unset = "Unset"
 }
 
-class TicTacButton: UIButton {
+class TicTacBox: UIButton {
 
-    func setCharacter(character: TicTacCharacters) {
-        self.setTitle(character.rawValue, forState: .Normal)
+    var character: TicTacCharacter = TicTacCharacter.Unset {
+        didSet {
+            self.setTitle(character.rawValue, forState: .Normal)
+        }
     }
 
 }
 
 class GameViewController: UIViewController {
 
-    @IBOutlet var button1: TicTacButton!
-    @IBOutlet var button2: TicTacButton!
-    @IBOutlet var button3: TicTacButton!
-    @IBOutlet var button4: TicTacButton!
-    @IBOutlet var button5: TicTacButton!
-    @IBOutlet var button6: TicTacButton!
-    @IBOutlet var button7: TicTacButton!
-    @IBOutlet var button8: TicTacButton!
-    @IBOutlet var button9: TicTacButton!
+    @IBOutlet var boxes: [TicTacBox]!
 
-    var buttons: [TicTacButton]!
+    var combinations = [[0, 1, 2], [0, 3, 6], [1, 4, 7], [2, 5, 9], [3, 4, 5], [6, 7, 9], [0, 4, 8], [6, 4, 2]]
 
-    var combinations = [(0, 1, 2), (0, 3, 6), (1, 4, 7), (2, 5, 9), (3, 4, 5), (6, 7, 9), (0, 4, 5), (6, 4, 2)]
-
-    var boxes: [TicTacCharacters] = [.Unset, .Unset, .Unset, .Unset, .Unset, .Unset, .Unset, .Unset, .Unset]
-
-    var currentPlayer: TicTacCharacters!
+    var currentPlayer: TicTacCharacter!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         currentPlayer = .X
-        buttons = [button1, button2, button3, button4, button5, button6, button7, button8, button9]
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,39 +44,69 @@ class GameViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func buttonTapped(sender: TicTacButton) {
-        let buttonIndex = find(buttons, sender)!
+    @IBAction func tryMakeMove(senderBox: TicTacBox) {
 
-        setCharacterForBoxIndex(buttonIndex, character: currentPlayer)
-    }
+        // Fetch index for box
+        var senderBoxIndex = find(boxes, senderBox)
 
-    func setCharacterForBoxIndex(index: Int, character: TicTacCharacters) {
+        // Ensure box is not yet set
+        if !boxIsSet(senderBox) {
 
-        let currentCharacter = boxes[index]
+            // Set sender box to current player
+            setBoxToCurrentPlayer(senderBox)
 
-        switch currentCharacter {
-        case .Unset:
+            if checkForWin() {
+                println("WIN!!!")
+            } else {
+                println("NOT A WIN BOO")
+            }
 
-            // If unset, set it and set button text
-            boxes[index] = currentPlayer
-            buttons[index].setCharacter(currentPlayer)
+            // Switch player for next turn
+            switchPlayer()
 
-            println("Button \(index)) now = \(currentPlayer.rawValue)")
+            println("Box \(senderBoxIndex) is now set to \(currentPlayer.rawValue)")
 
-            break
+        } else {
 
-        default:
-
-            // If set, do nothing
-            println("Button already tapped")
-
-            break
+            println("Oops! Box \(senderBoxIndex) already set to \(currentPlayer.rawValue)")
 
         }
+    }
 
-        // Switch player for next turn
-        switchPlayer()
+    func boxIsSet(box: TicTacBox) -> Bool {
+        return box.character != .Unset
+    }
 
+    func setBoxToCurrentPlayer(box: TicTacBox) {
+        return box.character = currentPlayer
+    }
+
+    func indexOfBox(box: TicTacBox) -> Int? {
+        return find(boxes, box)
+    }
+
+    func checkForWin() -> Bool {
+
+        let currentPlayerBoxes = boxesWithCharacter(currentPlayer)
+        let currentPlayerBoxIndices = currentPlayerBoxes.map { box -> Int in
+            return find(self.boxes, box)!
+        }
+
+        for combination in combinations {
+            let mutualKeys = combination.filter({ return contains(currentPlayerBoxIndices, $0) })
+
+            if mutualKeys.count == combination.count {
+                return true
+            }
+        }
+
+        return false
+    }
+
+    func boxesWithCharacter(player: TicTacCharacter) -> [TicTacBox] {
+        return boxes.filter { box -> Bool in
+            return box.character == player
+        }
     }
 
     func switchPlayer() {

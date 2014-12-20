@@ -16,51 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tik-PJ-xhN" customClass="TicTacButton" customModule="TicTacToe" customModuleProvider="target">
-                                <rect key="frame" x="198" y="157" width="60" height="60"/>
-                                <color key="backgroundColor" red="0.85129624609999999" green="0.85127079490000002" blue="0.8512852192" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="43"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Um0-du-36u"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8MD-VQ-Al9" customClass="TicTacButton" customModule="TicTacToe" customModuleProvider="target">
-                                <rect key="frame" x="61.5" y="225" width="60" height="60"/>
-                                <color key="backgroundColor" red="0.85129624609999999" green="0.85127079490000002" blue="0.8512852192" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="43"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="AoV-wl-sRo"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7B8-05-VzU" customClass="TicTacButton" customModule="TicTacToe" customModuleProvider="target">
-                                <rect key="frame" x="130" y="225" width="60" height="60"/>
-                                <color key="backgroundColor" red="0.85129624609999999" green="0.85127079490000002" blue="0.8512852192" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="43"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ptB-FI-Ud8"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Di9-jy-F4E" customClass="TicTacButton" customModule="TicTacToe" customModuleProvider="target">
-                                <rect key="frame" x="198" y="225" width="60" height="60"/>
-                                <color key="backgroundColor" red="0.85129624609999999" green="0.85127079490000002" blue="0.8512852192" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="43"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="nVo-yv-xBl"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oXo-oD-rRz" customClass="TicTacButton" customModule="TicTacToe" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oXo-oD-rRz" customClass="TicTacBox" customModule="TicTacToe" customModuleProvider="target">
                                 <rect key="frame" x="61" y="89" width="60" height="60"/>
                                 <color key="backgroundColor" red="0.85129624609999999" green="0.85127079490000002" blue="0.8512852192" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="43"/>
@@ -68,10 +24,10 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="0iF-dr-sCb"/>
+                                    <action selector="tryMakeMove:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Q5L-xb-oe9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhw-fr-cpN" customClass="TicTacButton" customModule="TicTacToe" customModuleProvider="target">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhw-fr-cpN" customClass="TicTacBox" customModule="TicTacToe" customModuleProvider="target">
                                 <rect key="frame" x="129" y="89" width="60" height="60"/>
                                 <color key="backgroundColor" red="0.85129624605178833" green="0.85127079486846924" blue="0.85128521919250488" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="43"/>
@@ -79,10 +35,10 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Xw7-6w-fbu"/>
+                                    <action selector="tryMakeMove:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="R0Q-99-gvA"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcq-eH-xfR" customClass="TicTacButton" customModule="TicTacToe" customModuleProvider="target">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcq-eH-xfR" customClass="TicTacBox" customModule="TicTacToe" customModuleProvider="target">
                                 <rect key="frame" x="197" y="89" width="60" height="60"/>
                                 <color key="backgroundColor" red="0.85129624609999999" green="0.85127079490000002" blue="0.8512852192" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="43"/>
@@ -90,10 +46,10 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="J7z-eo-etV"/>
+                                    <action selector="tryMakeMove:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="gPW-N7-mtT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tny-bE-YPj" customClass="TicTacButton" customModule="TicTacToe" customModuleProvider="target">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tny-bE-YPj" customClass="TicTacBox" customModule="TicTacToe" customModuleProvider="target">
                                 <rect key="frame" x="61" y="157" width="60" height="60"/>
                                 <color key="backgroundColor" red="0.85129624609999999" green="0.85127079490000002" blue="0.8512852192" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="43"/>
@@ -101,10 +57,10 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Jim-Sf-p9K"/>
+                                    <action selector="tryMakeMove:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="POt-em-ixl"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8dA-me-Fj3" customClass="TicTacButton" customModule="TicTacToe" customModuleProvider="target">
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8dA-me-Fj3" customClass="TicTacBox" customModule="TicTacToe" customModuleProvider="target">
                                 <rect key="frame" x="129" y="157" width="60" height="60"/>
                                 <color key="backgroundColor" red="0.85129624609999999" green="0.85127079490000002" blue="0.8512852192" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="43"/>
@@ -112,7 +68,51 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="jCF-OX-FpG"/>
+                                    <action selector="tryMakeMove:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="E8f-vH-4cF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tik-PJ-xhN" customClass="TicTacBox" customModule="TicTacToe" customModuleProvider="target">
+                                <rect key="frame" x="198" y="157" width="60" height="60"/>
+                                <color key="backgroundColor" red="0.85129624609999999" green="0.85127079490000002" blue="0.8512852192" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="43"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tryMakeMove:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="u95-vB-bXr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8MD-VQ-Al9" customClass="TicTacBox" customModule="TicTacToe" customModuleProvider="target">
+                                <rect key="frame" x="61" y="225" width="60" height="60"/>
+                                <color key="backgroundColor" red="0.85129624609999999" green="0.85127079490000002" blue="0.8512852192" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="43"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tryMakeMove:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Af3-RF-fYA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7B8-05-VzU" customClass="TicTacBox" customModule="TicTacToe" customModuleProvider="target">
+                                <rect key="frame" x="130" y="225" width="60" height="60"/>
+                                <color key="backgroundColor" red="0.85129624609999999" green="0.85127079490000002" blue="0.8512852192" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="43"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tryMakeMove:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="j4O-GC-v9J"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Di9-jy-F4E" customClass="TicTacBox" customModule="TicTacToe" customModuleProvider="target">
+                                <rect key="frame" x="198" y="225" width="60" height="60"/>
+                                <color key="backgroundColor" red="0.85129624609999999" green="0.85127079490000002" blue="0.8512852192" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="43"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tryMakeMove:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Qwz-Id-r4q"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -120,15 +120,15 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="button1" destination="oXo-oD-rRz" id="kwf-ha-3ai"/>
-                        <outlet property="button2" destination="yhw-fr-cpN" id="S52-iz-q3O"/>
-                        <outlet property="button3" destination="vcq-eH-xfR" id="ikF-bK-2ZM"/>
-                        <outlet property="button4" destination="Tny-bE-YPj" id="OLc-Jj-Uxf"/>
-                        <outlet property="button5" destination="8dA-me-Fj3" id="ME8-mZ-O4I"/>
-                        <outlet property="button6" destination="Tik-PJ-xhN" id="gM0-yW-1Gr"/>
-                        <outlet property="button7" destination="8MD-VQ-Al9" id="u4k-MW-u22"/>
-                        <outlet property="button8" destination="7B8-05-VzU" id="teF-IS-AtY"/>
-                        <outlet property="button9" destination="Di9-jy-F4E" id="pDu-B0-o0O"/>
+                        <outletCollection property="boxes" destination="oXo-oD-rRz" collectionClass="NSMutableArray" id="PPC-Ue-N7d"/>
+                        <outletCollection property="boxes" destination="yhw-fr-cpN" collectionClass="NSMutableArray" id="Xed-Tm-2s9"/>
+                        <outletCollection property="boxes" destination="vcq-eH-xfR" collectionClass="NSMutableArray" id="GlO-mu-Rtu"/>
+                        <outletCollection property="boxes" destination="Tny-bE-YPj" collectionClass="NSMutableArray" id="yR4-U1-NuZ"/>
+                        <outletCollection property="boxes" destination="8dA-me-Fj3" collectionClass="NSMutableArray" id="30B-hs-1Ut"/>
+                        <outletCollection property="boxes" destination="Tik-PJ-xhN" collectionClass="NSMutableArray" id="RXv-GB-YbM"/>
+                        <outletCollection property="boxes" destination="8MD-VQ-Al9" collectionClass="NSMutableArray" id="NHt-LU-a8X"/>
+                        <outletCollection property="boxes" destination="7B8-05-VzU" collectionClass="NSMutableArray" id="V9x-z8-Pzf"/>
+                        <outletCollection property="boxes" destination="Di9-jy-F4E" collectionClass="NSMutableArray" id="AGY-02-EQY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
